@@ -1,0 +1,28 @@
+.imagen {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero_container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px;
+    align-items: center;
+}
+
+.hero_info {
+     max-width: 600px;
+
+    p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+}
+
+.nombre{
+    font-size: 40px;
+    font-weight: bold;
+}

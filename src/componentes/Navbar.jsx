@@ -5,7 +5,7 @@ function Navbar() {
         <>
             <div className='header'>
                 <div className="logo">
-                    <span className="rojo">Mi</span>Portfolio
+                    <span className="azul">Mi</span>Portfolio
                 </div>
             </div>
             <nav className="navbar">
@@ -13,7 +13,7 @@ function Navbar() {
                     <li><a href="#hero">Hero</a></li>
                     <li><a href="#sobre-mi">Sobre Mi</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="contacto">Contacto</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
             
