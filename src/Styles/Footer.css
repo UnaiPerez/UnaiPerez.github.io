@@ -1,0 +1,26 @@
+
+.footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    color: white;
+    align-items: center;
+}
+
+.links {
+
+    display: flex;
+    gap: 15px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover{
+            cursor: pointer;
+            color: rgb(37, 37, 199);
+        }
+    }
+}

@@ -1,10 +1,11 @@
 
 import '../Styles/Proyectos.css'
 import Modal from './Modal.jsx'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Proyectos() {
 
+    /*
     const proyectos = [
         {
             id: 1,
@@ -21,6 +22,9 @@ function Proyectos() {
             imagen: "https://api.dicebear.com/7.x/bottts/svg?seed=extension"
         }
     ]
+        */
+    
+    const [proyectos, setProyectos] = useState([])
 
     const [abierto, setAbierto] = useState(null)
     const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null)
@@ -35,6 +39,25 @@ function Proyectos() {
         setAbierto(true)
     }
 
+    useEffect( () => {
+        
+        const cargarRepos = async () => {
+            const res = await fetch('https://api.github.com/users/UnaiPerez/repos')
+            const data = await res.json()
+
+            const reposConImagen = data.map(repo => ({
+                ...repo,
+                imagen: `https://api.dicebear.com/7.x/bottts/svg?seed=${repo.name}`
+            }))
+
+            console.log(data)
+            setProyectos(reposConImagen)
+        }
+
+        cargarRepos()
+
+    }, [])
+
     return (
         <>
         <div id='proyectos' className='proyectos'>
@@ -42,20 +65,19 @@ function Proyectos() {
 
             <div className='proyectos_grid'>
 
-                {proyectos.map( p => (
+                {proyectos
+                    .filter(p => p.description)
+                    .map( p => (
                     
                     <div key={p.id} className='proyectos_card' onClick={() => gestionarClicProyecto(p)}>
-                        <h3>{p.nombre}</h3>
+                        <h3>{p.name}</h3>
                         <div className='proyecto_info'>
-                            <p>{p.descripcion}</p>
-                            <div className='tecnologias'>
-                                {p.tecnologias.map((t,i) => (
-                                    <span key={i} className='tech'>{t}</span>
-                                ))}
-                            </div>
-                            <img className="proyecto_img" src={p.imagen}></img>
+                            <p>{p.description}</p>   
+                            <div className="tecnologias">
+                                <span className="tech">{p.language}</span>
+                            </div>                     
+                            <img className="proyecto_img" src={p.imagen} />
                         </div>
-                        
                     </div>
 
                 ))}

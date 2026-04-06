@@ -25,6 +25,12 @@
     align-items: center;
 }
 
+.dark .link_img{
+  background-color: #1f1f2e;
+  color: white;
+  border: 1px solid rgb(255,255,255, 0.4);
+}
+
 .contacto_container {
   display: flex;
   flex-direction: column;
@@ -42,6 +48,11 @@
     gap: 40px;
     text-decoration: none;
     margin-left: 20px;
+    cursor: pointer;
+}
+
+.contacto_item:hover {
+    background-color: rgb(37, 37, 199, 0.2);
 }
 
 .imagen_contacto {

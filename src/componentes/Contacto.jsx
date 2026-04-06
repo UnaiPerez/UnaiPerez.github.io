@@ -23,12 +23,12 @@ function Contacto() {
                             <p>UnaiPerez</p>
                         </a>
 
-                        <a href="https://github.com/UnaiPerez" className='contacto_item'>
+                        <a href="https://www.instagram.com/unaiiperez_" className='contacto_item'>
                             <FaInstagram size={30}></FaInstagram>
                             <p>unaiiperez_</p>
                         </a>
 
-                        <a href="https://github.com/UnaiPerez" className='contacto_item'>
+                        <a href="https://x.com/unaii_perez" className='contacto_item'>
                             <FaSquareXTwitter size={30}></FaSquareXTwitter>
                             <p>unaii_perez</p>
                         </a>

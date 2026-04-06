@@ -9,21 +9,26 @@ function Modal({ abierto, proyectoSeleccionado, cerrar }) {
       
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         
-        <h2>{proyectoSeleccionado.nombre}</h2>
-        <p>{proyectoSeleccionado.descripcion}</p>
+        <h2>{proyectoSeleccionado.name}</h2>
+        <p>{proyectoSeleccionado.description}</p>
 
         <div className='tec_img'>
           <div className="tecnologias">
-            {proyectoSeleccionado.tecnologias.map((t, i) => (
-              <span key={i} className="tech">{t}</span>
-            ))}
+              <span className="tech">{proyectoSeleccionado.language}</span>
           </div>  
 
           <img className='modal_img' src={proyectoSeleccionado.imagen} alt={proyectoSeleccionado.nombre} />
+
         </div>
         
+        <div className='botones'>
+          <a href={proyectoSeleccionado.html_url}>
+          <button className='btn_github'>Ver en GitHub</button>
+        </a>
 
         <button className='modal_boton' onClick={cerrar}>Cerrar</button>
+        </div>
+
 
       </div>
     </div>

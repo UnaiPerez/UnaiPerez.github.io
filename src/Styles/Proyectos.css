@@ -29,10 +29,21 @@
   cursor: pointer;
 }
 
+.dark .proyectos_card {
+  background-color: #1f1f2e;
+  color: white;
+  border: 1px solid rgb(255,255,255, 0.4);
+}
+
 .proyectos_card h3 {
   margin-bottom: 15px;
   text-align: center;
   text-transform: uppercase;
+  color: black;
+}
+
+.dark .proyectos_card h3 {
+  color: white;
 }
 
 .proyectos_card p {
@@ -47,8 +58,7 @@
 
 .proyecto_info {
     display: flex;
-    justify-content: center;
-    gap: 150px;
+    justify-content: space-around;
       align-items: center;
 }
 

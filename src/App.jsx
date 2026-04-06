@@ -8,6 +8,7 @@ import Hero from './componentes/Hero.jsx'
 import SobreMi from './componentes/SobreMi.jsx'
 import Proyectos from './componentes/Proyectos.jsx'
 import Contacto from './componentes/Contacto.jsx'
+import Footer from './componentes/Footer.jsx'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
       <SobreMi></SobreMi>
       <Proyectos></Proyectos>
       <Contacto></Contacto>
+      <Footer></Footer>
     </>
   )
 

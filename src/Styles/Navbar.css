@@ -7,7 +7,23 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
+
+.theme_boton {
+  background: none;
+  border: none;
+  padding: 20px;
+  position: absolute;
+  right: 50px;
+  font-size: 22px;
+}
+
 
 .logo{
   font-size: 60px;

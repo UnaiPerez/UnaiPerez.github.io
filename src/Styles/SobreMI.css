@@ -27,6 +27,12 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.dark .card{
+  background-color: #1f1f2e;
+  color: white;
+  border: 1px solid rgb(255,255,255, 0.4);
+}
+
 .card_titulo {
   text-align: center;
   font-size: 21px;
@@ -34,6 +40,10 @@
   font-weight: bold;
   color: black;
   margin-bottom: 15px;
+}
+
+.dark .card_titulo {
+  color: white;
 }
 
 .card_list {

@@ -1,4 +1,5 @@
 import '../Styles/Navbar.css'
+import ThemeSelector from './ThemeSelector.jsx'
 
 function Navbar() {
     return(
@@ -7,6 +8,7 @@ function Navbar() {
                 <div className="logo">
                     <span className="azul">Mi</span>Portfolio
                 </div>
+                <ThemeSelector></ThemeSelector>
             </div>
             <nav className="navbar">
                 <ul className="menu">
