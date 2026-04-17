@@ -28,6 +28,7 @@ function Proyectos() {
 
     const [abierto, setAbierto] = useState(null)
     const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null)
+    const [filtro, setFiltro] = useState("Todos")
 
     const cerrarModal = () => {
         setAbierto(false)
@@ -58,14 +59,26 @@ function Proyectos() {
 
     }, [])
 
+    const proyectosFiltrados = proyectos.filter( p => {
+        if( filtro === "Todos") return true;
+        return p.language === filtro;
+    });
+
     return (
         <>
         <div id='proyectos' className='proyectos'>
             <h2 className='proyectos_titulo'>Proyectos</h2>
 
+            <div className='botones_filtro'>
+                <button onClick={() => setFiltro("Todos")} className={ "boton_filtro" + (filtro === "Todos" ? " activo" : "") } >Todos</button>
+                <button onClick={() => setFiltro("JavaScript")} className={ "boton_filtro" + (filtro === "JavaScript" ? " activo" : "") }>JavaScript</button>
+                <button onClick={() => setFiltro("PHP")} className={ "boton_filtro" + (filtro === "PHP" ? " activo" : "") }>PHP</button>
+                <button onClick={() => setFiltro("Java")} className={ "boton_filtro" + (filtro === "Java" ? " activo" : "") }>Java</button>
+            </div>
+
             <div className='proyectos_grid'>
 
-                {proyectos
+                {proyectosFiltrados
                     .filter(p => p.description)
                     .map( p => (
                     

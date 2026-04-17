@@ -27,6 +27,11 @@
   padding: 20px;
   border-radius: 12px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.proyectos_card:hover {
+  transform: translateY(-5px);
 }
 
 .dark .proyectos_card {
@@ -86,3 +91,37 @@
   margin-bottom: 15px;
 }
 
+
+.botones_filtro{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.boton_filtro {
+  padding: 10px;
+  background-color: rgb(37, 37, 199);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton_filtro:hover{
+  background-color: rgb(15, 15, 115);
+}
+
+.activo {
+  background-color:  #333;
+  color: white;
+  border: 1px solid rgb(104, 104, 105);
+}
+
+.activo:hover {
+  cursor:default;
+  background-color: #333;
+}

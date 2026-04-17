@@ -26,3 +26,20 @@
     font-size: 40px;
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .hero_container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .imagen {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero_info {
+    width: 100%;
+  }
+}
