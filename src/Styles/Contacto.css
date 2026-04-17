@@ -61,3 +61,27 @@
     height: 350px;
     object-fit: fill;
 }
+
+@media (max-width: 768px) {
+  .link_img {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contacto_container {
+    width: 100%;
+  }
+
+  .contacto_item {
+    margin-left: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .imagen_contacto {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    align-self: center;
+  }
+}

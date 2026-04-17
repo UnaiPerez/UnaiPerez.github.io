@@ -44,6 +44,7 @@
   list-style: none;
   margin: 0;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .menu a{
@@ -60,4 +61,31 @@
 .menu a:hover{
   background-color: white;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 56px 16px 16px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  .theme_boton {
+    right: 12px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .menu {
+    gap: 8px;
+    padding: 12px;
+    justify-content: center;
+  }
+
+  .menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }

@@ -24,3 +24,17 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
